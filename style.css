@@ -1,7 +1,12 @@
+/* Reset e configuração base */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  font-size: 16px; /* Base de 1rem = 16px */
 }
 
 body,
@@ -15,17 +20,18 @@ html {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh; /* Garante altura mínima da tela e evita margens extras */
   background-color: #9575cd;
   text-align: center;
+  padding-top: 1rem; /* Ajuste opcional para melhorar o espaçamento */
 }
 
-/* Estilizando o quadrado de fotos */
+/* Estilizando o quadrado de fotos para desktop */
 #photo-box {
   width: 300px;
-  height: 300px;
+  height: 300px; /* Mantém quadrado no desktop */
   background-color: #ddd;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -40,14 +46,33 @@ html {
 
 /* Parágrafo abaixo do quadrado */
 #description {
-  font-size: 18px;
+  font-size: 1.125rem;
   color: #ede7f6;
-  margin-bottom: 30px;
+  margin-bottom: 1.875rem;
 }
 
 /* Estilo do cronômetro */
 #countdown {
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: bold;
   color: #ede7f6;
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+  #photo-box {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 4; /* Proporção 3x4 para dispositivos móveis */
+  }
+
+  #description {
+    margin: 0 1rem 0.5rem 1rem; /* Margens laterais em dispositivos móveis */
+  }
+
+  /* Ajusta tamanhos de fonte para dispositivos móveis */
+  #description,
+  #countdown {
+    font-size: 1rem;
+  }
 }
