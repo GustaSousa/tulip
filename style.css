@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #9575cd;
+  text-align: center;
+}
+
+/* Estilizando o quadrado de fotos */
+#photo-box {
+  width: 300px;
+  height: 300px;
+  background-color: #ddd;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+#photo-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Parágrafo abaixo do quadrado */
+#description {
+  font-size: 18px;
+  color: #ede7f6;
+  margin-bottom: 30px;
+}
+
+/* Estilo do cronômetro */
+#countdown {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ede7f6;
+}
