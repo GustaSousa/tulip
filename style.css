@@ -1,3 +1,10 @@
+/* Definição de variáveis globais */
+:root {
+  --background-color: #9575cd;
+  --box-background-color: #ddd;
+  --text-color: #ede7f6;
+}
+
 /* Reset e configuração base */
 * {
   margin: 0;
@@ -21,7 +28,7 @@ html {
   align-items: center;
   justify-content: center;
   min-height: 100vh; /* Garante altura mínima da tela e evita margens extras */
-  background-color: #9575cd;
+  background-color: var(--background-color);
   text-align: center;
   padding-top: 1rem; /* Ajuste opcional para melhorar o espaçamento */
 }
@@ -30,7 +37,7 @@ html {
 #photo-box {
   width: 300px;
   height: 300px; /* Mantém quadrado no desktop */
-  background-color: #ddd;
+  background-color: var(--box-background-color);
   margin-bottom: 1.25rem;
   display: flex;
   align-items: center;
@@ -47,7 +54,7 @@ html {
 /* Parágrafo abaixo do quadrado */
 #description {
   font-size: 1.125rem;
-  color: #ede7f6;
+  color: var(--text-color);
   margin-bottom: 1.875rem;
 }
 
@@ -55,7 +62,7 @@ html {
 #countdown {
   font-size: 1.25rem;
   font-weight: bold;
-  color: #ede7f6;
+  color: var(--text-color);
 }
 
 /* Responsividade para dispositivos móveis */
